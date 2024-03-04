@@ -1,0 +1,110 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "project page",
+	title: "Projects",
+};
+---
+
+<!-- I want to make a Astro list for all of the bullet points under these projects -->
+<PageLayout meta={meta}>
+	<h1 class="title mb-6">Projects</h1>
+	<section>
+		<h2 class="title mb-4">ZScaler Alert Service</h2>
+		<ul class="ml-6 list-disc">
+			<li>
+				Wrote a Python script to authenticate to VMWare VeloCloud Orchestrator and poll the SD-WAN
+				edge event stream for store network disconnection events to Zscaler Internet Access
+			</li>
+			<li>
+				Utilized PostgreSQL to store JSON data that represents actively down store Zscaler
+				connections
+			</li>
+			<li>
+				Designed functions to quickly send an alert through Slack and email if a down event has been
+				detected
+			</li>
+			<li>Implemented the service on a Rocky Linux server running every 1 minute via cron job</li>
+		</ul>
+		<br />
+		<p class="mb-4">
+			<a
+				aria-label="github repository"
+				class="cactus-link inline-block"
+				href="https://github.com/MilesHoover/repo-name"
+				rel="noopener noreferrer"
+				target="_blank">GitHub</a
+			> |
+			<a
+				aria-label="blog post"
+				class="cactus-link inline-block"
+				href="https://mileshoover.com/blog/#blog"
+				rel="noopener noreferrer"
+				target="_blank">Blog Post</a
+			>
+		</p>
+	</section>
+	<section class="mt-16">
+		<h2 class="title mb-4">[Archived] Cloud Resume Challenge</h2>
+		<ul class="ml-6 list-disc">
+			<li>
+				Built mileshoover.com using Terraform to provision infrastructure, Route 53 for DNS, an S3
+				bucket for storage, and CloudFront for security and availability
+			</li>
+			<li>
+				Created a total page view counter with DynamoDB to store the count, a Python Lambda function
+				to increase the count, and API Gateway to bridge the gap between the frontend and the
+				backend
+			</li>
+			<li>
+				Designed a CI/CD pipeline with GitHub Actions to automate building infrastructure and
+				running Cypress end-to-end tests
+			</li>
+		</ul>
+		<br />
+		<p class="mb-4">
+			<a
+				aria-label="github repository"
+				class="cactus-link inline-block"
+				href="https://github.com/MilesHoover/CRC-Backend"
+				rel="noopener noreferrer"
+				target="_blank">GitHub</a
+			> |
+			<a
+				aria-label="blog post"
+				class="cactus-link inline-block"
+				href="https://mileshoover.com/blog/"
+				rel="noopener noreferrer"
+				target="_blank">Blog Post</a
+			>
+		</p>
+	</section>
+</PageLayout>
+
+<!-- Project Template -->
+
+<!--
+  <section class="mt-16">
+    <h2 class="title mb-4">title</h2>
+    <ul class="list-inside list-disc">
+      <li>
+
+      </li>
+    </ul>
+    <a
+			aria-label="github repository"
+			class="cactus-link inline-block"
+			href="https://github.com/MilesHoover/repo-name"
+			rel="noopener noreferrer"
+			target="_blank">GitHub</a
+		> |
+		<a
+			aria-label="blog post"
+			class="cactus-link inline-block"
+			href="https://mileshoover.com/blog/#blog"
+			rel="noopener noreferrer"
+			target="_blank">Blog Post</a
+		>
+  </section>
+ -->
