@@ -8,7 +8,7 @@ tags: ["cloud resume challenge", "aws", "terraform", "Python", "DevOps"]
 
 ## Update
 
-**03/04/24**: This project is officially archived and I no longer host mileshoover.com declaratively through Terraform via AWS. I have decided to host my website on GitHub for the simplicity and cost savings. I have also decided to remove the page view count feature from my website as it was not providing any real value to my readers and was simply a learning experience.
+**03/04/24**: This project is officially archived and I no longer host mileshoover.com declaratively through Terraform via AWS. I have decided to host my website on Netlify for the simplicity and cost savings. I have also decided to remove the page view count feature from my website as it was not providing any real value to my readers and was simply a learning experience.
 
 ---
 
@@ -16,7 +16,7 @@ tags: ["cloud resume challenge", "aws", "terraform", "Python", "DevOps"]
 
 ## Completing The Cloud Resume Challenge
 
-The Cloud Resume Challenge, created by the talented Forrest Brazeal, is a project to build a personal resume website and page view count function from scratch using several cloud services. On top of this, you are tasked with implementing several common practices in DevOps such as provisioning infrastructure as code (IaC), Creating a continuous integration & continuous deployment (CI/CD) pipeline to automate your workflow, and designing thorough unit tests to make sure your code works flawlessly.
+The [Cloud Resume Challenge](https://cloudresumechallenge.dev/), created by the talented [Forrest Brazeal](https://www.linkedin.com/in/forrestbrazeal/?lipi=urn%3Ali%3Apage%3Ad_flagship3_publishing_post_edit%3BuwbroVATRBypN2JvUa2DDw%3D%3D), is a project to build a personal resume website and page view count function from scratch using several cloud services. On top of this, you are tasked with implementing several common practices in DevOps such as provisioning infrastructure as code (IaC), Creating a continuous integration & continuous deployment (CI/CD) pipeline to automate your workflow, and designing thorough unit tests to make sure your code works flawlessly.
 
 I have always been interested in building web services but have never utilized any “serverless” infrastructure or DevOps principles in my previous projects. When I learned about The Cloud Resume Challenge my curiosity instantly peaked and I thought this could be the perfect opportunity to get my hands dirty in the cloud. I had no idea how far the rabbit hole went that I was about to jump into but I’m incredibly glad I did. Through completing this project, I have learned several fascinating new technologies and ideas that I will be able to utilize and build upon moving forward on my path as a developer.
 
@@ -46,7 +46,7 @@ To complete this project, I created a CI/CD pipeline to automate the testing and
 
 Through completing The Cloud Resume Challenge, I have learned a great deal about the process of provisioning cloud infrastructure and the bigger picture behind DevOps concepts such as IaC, CI/CD, and testing. I also got to explore REST APIs and sharpen my Python skills by developing the backend portion of my website. Although I’ve learned a lot, I have hardly broken the surface in the vast world of DevOps and cloud-based infrastructure. Moving forward, I will continue exploring the concepts and tools introduced to me and I’m incredibly eager to see how far I can take them.
 
-Thanks again to @forrestbrazeal for creating this challenge and also @LouJayBee who was a great help to me throughout this entire process, without them none of this would have been possible.
+Thanks again to [@forrestbrazeal](https://www.linkedin.com/in/forrestbrazeal/?lipi=urn%3Ali%3Apage%3Ad_flagship3_publishing_post_edit%3BuwbroVATRBypN2JvUa2DDw%3D%3D) for creating this challenge and also [@LouJayBee](https://www.linkedin.com/in/loujaybee/?lipi=urn%3Ali%3Apage%3Ad_flagship3_publishing_post_edit%3BuwbroVATRBypN2JvUa2DDw%3D%3D) who was a great help to me throughout this entire process, without them none of this would have been possible.
 
 ### Links
 

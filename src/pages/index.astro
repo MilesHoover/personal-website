@@ -11,12 +11,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 const personalProjects: { desc: string; href: string; title: string }[] = [
 	{
 		desc: "Network anomaly detection via Python3",
-		href: "https://mileshoover.com/projects/#zscaler",
+		href: "https://mileshoover.com/projects#zscaler-alert-service",
 		title: "Zscaler Alert Service",
 	},
 	{
 		desc: "My former website, built on AWS infrastructure",
-		href: "https://mileshoover.com/projects/#crc",
+		href: "https://mileshoover.com/projects#cloud-resume-challenge",
 		title: "[Archived] Cloud Resume Challenge",
 	},
 ];
@@ -32,7 +32,6 @@ const personalProjects: { desc: string; href: string; title: string }[] = [
 				aria-label="about me"
 				class="cactus-link inline-block"
 				href="https://mileshoover.com/about/"
-				rel="noopener noreferrer"
 				target="_blank">Read more</a
 			>.
 		</p>
@@ -46,7 +45,7 @@ const personalProjects: { desc: string; href: string; title: string }[] = [
 					<div class="flex flex-col gap-2 md:flex-row">
 						<dt>
 							<span class="flex">
-								<a class="cactus-link" href={href} rel="noopener noreferrer" target="_blank">
+								<a class="cactus-link" href={href}>
 									{title}
 								</a>
 								:
