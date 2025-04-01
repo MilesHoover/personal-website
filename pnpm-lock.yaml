@@ -41,8 +41,8 @@ dependencies:
 
 devDependencies:
   '@astrojs/check':
-    specifier: ^0.4.1
-    version: 0.4.1(prettier-plugin-astro@0.13.0)(prettier@3.5.3)(typescript@5.8.2)
+    specifier: ^0.9.4
+    version: 0.9.4(prettier-plugin-astro@0.13.0)(prettier@3.5.3)(typescript@5.8.2)
   '@iconify-json/mdi':
     specifier: ^1.2.3
     version: 1.2.3
@@ -165,15 +165,14 @@ packages:
     resolution: {integrity: sha512-Mex9nXf9vR6AhcXmMrlz/HVgYYZpVGJ6YlPgwl7UnaFpnshXs6EK/oa5Gpf3CzENMjkvEx2tQtntGnb7UtSTOQ==}
     dev: false
 
-  /@astrojs/check@0.4.1(prettier-plugin-astro@0.13.0)(prettier@3.5.3)(typescript@5.8.2):
-    resolution: {integrity: sha512-XEsuU4TlWkgcsvdeessq5mXLXV1fejtxIioCPv/FfhTzb1bDYe2BtLiSBK+rFTyD9Hl686YOas9AGNMJcpoRsw==}
+  /@astrojs/check@0.9.4(prettier-plugin-astro@0.13.0)(prettier@3.5.3)(typescript@5.8.2):
+    resolution: {integrity: sha512-IOheHwCtpUfvogHHsvu0AbeRZEnjJg3MopdLddkJE70mULItS/Vh37BHcI00mcOJcH1vhD3odbpvWokpxam7xA==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
     dependencies:
       '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.13.0)(prettier@3.5.3)(typescript@5.8.2)
-      chokidar: 3.6.0
-      fast-glob: 3.3.3
+      chokidar: 4.0.3
       kleur: 4.1.5
       typescript: 5.8.2
       yargs: 17.7.2
@@ -223,7 +222,7 @@ packages:
       volar-service-typescript: 0.0.62(@volar/language-service@2.4.12)
       volar-service-typescript-twoslash-queries: 0.0.62(@volar/language-service@2.4.12)
       volar-service-yaml: 0.0.62(@volar/language-service@2.4.12)
-      vscode-html-languageservice: 5.3.1
+      vscode-html-languageservice: 5.3.3
       vscode-uri: 3.1.0
     transitivePeerDependencies:
       - typescript
@@ -351,7 +350,7 @@ packages:
   /@astrojs/yaml2ts@0.2.2:
     resolution: {integrity: sha512-GOfvSr5Nqy2z5XiwqTouBBpy5FyI6DEe+/g/Mk5am9SjILN1S5fOEvYK0GuWHg98yS/dobP4m8qyqw/URW35fQ==}
     dependencies:
-      yaml: 2.7.0
+      yaml: 2.7.1
     dev: true
 
   /@babel/code-frame@7.26.2:
@@ -580,8 +579,8 @@ packages:
     resolution: {integrity: sha512-fXVXEyFA5Yv3M3n8sUGT7+fvecGrZP4k6FnWWMSZVQf69kAq0LLpaBQLGcPR30m3zMmKYhECP4k/ZkzvhEW5kw==}
     dev: true
 
-  /@emnapi/runtime@1.3.1:
-    resolution: {integrity: sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==}
+  /@emnapi/runtime@1.4.0:
+    resolution: {integrity: sha512-64WYIf4UYcdLnbKn/umDlNjQDSS8AgZrI/R9+x5ilkUVFxXcA1Ebl+gQLc/6mERA4407Xof0R7wEyEuj091CVw==}
     requiresBuild: true
     dependencies:
       tslib: 2.8.1
@@ -1294,7 +1293,7 @@ packages:
     cpu: [wasm32]
     requiresBuild: true
     dependencies:
-      '@emnapi/runtime': 1.3.1
+      '@emnapi/runtime': 1.4.0
     dev: false
     optional: true
 
@@ -2622,16 +2621,19 @@ packages:
     dev: false
     optional: true
 
-  /bare-fs@4.0.1:
-    resolution: {integrity: sha512-ilQs4fm/l9eMfWY2dY0WCIUplSUp7U0CT1vrqMg1MUdeZl4fypu5UP0XcDBK5WBQPJAKP1b7XEodISmekH/CEg==}
-    engines: {bare: '>=1.7.0'}
+  /bare-fs@4.0.2:
+    resolution: {integrity: sha512-S5mmkMesiduMqnz51Bfh0Et9EX0aTCJxhsI4bvzFFLs8Z1AV8RDHadfY5CyLwdoLHgXbNBEN1gQcbEtGwuvixw==}
+    engines: {bare: '>=1.16.0'}
     requiresBuild: true
+    peerDependencies:
+      bare-buffer: '*'
+    peerDependenciesMeta:
+      bare-buffer:
+        optional: true
     dependencies:
       bare-events: 2.5.4
       bare-path: 3.0.0
       bare-stream: 2.6.5(bare-events@2.5.4)
-    transitivePeerDependencies:
-      - bare-buffer
     dev: false
     optional: true
 
@@ -2897,6 +2899,13 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.3
+
+  /chokidar@4.0.3:
+    resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
+    engines: {node: '>= 14.16.0'}
+    dependencies:
+      readdirp: 4.1.2
+    dev: true
 
   /chownr@1.1.4:
     resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
@@ -6521,7 +6530,7 @@ packages:
     dependencies:
       lilconfig: 3.1.3
       postcss: 8.5.3
-      yaml: 2.7.0
+      yaml: 2.7.1
 
   /postcss-nested@6.2.0(postcss@8.5.3):
     resolution: {integrity: sha512-HQbt28KulC5AJzG+cZtj9kvKB93CFCdLvog1WFLf1D+xmMvPGlBstkpTEZfK5+AN9hfJocyBFCNiqyS48bpgzQ==}
@@ -6768,6 +6777,11 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+
+  /readdirp@4.1.2:
+    resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
+    engines: {node: '>= 14.18.0'}
+    dev: true
 
   /reading-time@1.5.0:
     resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
@@ -7707,7 +7721,7 @@ packages:
       pump: 3.0.2
       tar-stream: 3.1.7
     optionalDependencies:
-      bare-fs: 4.0.1
+      bare-fs: 4.0.2
       bare-path: 3.0.0
     transitivePeerDependencies:
       - bare-buffer
@@ -8208,7 +8222,7 @@ packages:
         optional: true
     dependencies:
       '@volar/language-service': 2.4.12
-      vscode-css-languageservice: 6.3.2
+      vscode-css-languageservice: 6.3.3
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
     dev: true
@@ -8237,7 +8251,7 @@ packages:
         optional: true
     dependencies:
       '@volar/language-service': 2.4.12
-      vscode-html-languageservice: 5.3.1
+      vscode-html-languageservice: 5.3.3
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
     dev: true
@@ -8300,8 +8314,8 @@ packages:
       yaml-language-server: 1.15.0
     dev: true
 
-  /vscode-css-languageservice@6.3.2:
-    resolution: {integrity: sha512-GEpPxrUTAeXWdZWHev1OJU9lz2Q2/PPBxQ2TIRmLGvQiH3WZbqaNoute0n0ewxlgtjzTW3AKZT+NHySk5Rf4Eg==}
+  /vscode-css-languageservice@6.3.3:
+    resolution: {integrity: sha512-xXa+ftMPv6JxRgzkvPwZuDCafIdwDW3kyijGcfij1a2qBVScr2qli6MfgJzYm/AMYdbHq9I/4hdpKV0Thim2EA==}
     dependencies:
       '@vscode/l10n': 0.0.18
       vscode-languageserver-textdocument: 1.0.12
@@ -8309,8 +8323,8 @@ packages:
       vscode-uri: 3.1.0
     dev: true
 
-  /vscode-html-languageservice@5.3.1:
-    resolution: {integrity: sha512-ysUh4hFeW/WOWz/TO9gm08xigiSsV/FOAZ+DolgJfeLftna54YdmZ4A+lIn46RbdO3/Qv5QHTn1ZGqmrXQhZyA==}
+  /vscode-html-languageservice@5.3.3:
+    resolution: {integrity: sha512-AK/jJM0VIWRrlfqkDBMZxNMnxYT5I2uoMVRoNJ5ePSplnSaT9mbYjqJlxxeLvUrOW7MEH0vVIDzU48u44QZE0w==}
     dependencies:
       '@vscode/l10n': 0.0.18
       vscode-languageserver-textdocument: 1.0.12
@@ -8543,8 +8557,8 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  /yaml@2.7.0:
-    resolution: {integrity: sha512-+hSoy/QHluxmC9kCIJyL/uyFmLmc+e5CFR5Wa+bpIhIj85LVb9ZH2nVnqrHoSvKogwODv0ClqZkmiSSaIH5LTA==}
+  /yaml@2.7.1:
+    resolution: {integrity: sha512-10ULxpnOCQXxJvBgxsn9ptjq6uviG/htZKk9veJGhlqn3w/DxQ631zFF+nlQXLwmImeS5amR2dl2U8sg6U9jsQ==}
     engines: {node: '>= 14'}
     hasBin: true
 
